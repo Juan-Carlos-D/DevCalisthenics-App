@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevCalisthenics</title>
+    <title>{% block title %}DevCalisthenics{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="preload" as="image" href="{{ url_for('static', filename='assets/Base/ringggs.webp')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"/>
+    {% block stylesheets %}{% endblock %}
     <!-- <script>
         window.embeddedChatbotConfig = {
         chatbotId: "PEC1PqAne78strokyfcBh",
