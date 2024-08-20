@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevCalisthenics</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="preload" as="image" href="static/assets/Base/ringggs.webp">
+    <link rel="preload" as="image" href="{{ url_for('static', filename='assets/Base/ringggs.webp')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"/>
     <!-- <script>
@@ -32,13 +32,13 @@
                     <i class="ri-close-line"></i>
                 </div>
 
-                <a href="index.html" class="logo">
-                    <img src="static/assets/Base/devcal.png">
+                <a href="{{url_for('home')}}" class="logo">
+                    <img src="{{url_for('satic', filename='assets/Base/devcal.png')}}">
                 </a>
 
                 <ul class="nav-list">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{{url_for('home')}}">Home</a>
                     </li>
                     <li>
                         <a href="#" class="dropdown-toggle">Programs <i class="fas fa-caret-down"></i></a>
@@ -110,7 +110,7 @@
         </ul>
 
         <ul class="footer-menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{url_for('home')}}">Home</a></li>
             <li><a href="#">Programs</a></li>
             <li><a href="#">Nutrition</a></li>
             <li><a href="#">Support</a></li>
