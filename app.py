@@ -29,7 +29,7 @@ def macrocalculator():
         height_unit = request.form['height_unit']
 
         macros = calculate_macros(weight, height, age, gender, activity_level, goal, weight_unit, height_unit)
-        return render_template('macroscalc.html', macros=macros, weight=weight, height=height, age=age, gender=gender, activity_level=activity_level, goal=goal, weight_unit=weight_unit, height_unit=height_unit)
+        return render_template('Nutrition/macroscalc.html', macros=macros, weight=weight, height=height, age=age, gender=gender, activity_level=activity_level, goal=goal, weight_unit=weight_unit, height_unit=height_unit)
 
     return render_template('Nutrition/macroscalc.html')
 
