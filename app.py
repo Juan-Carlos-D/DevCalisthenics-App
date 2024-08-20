@@ -14,7 +14,7 @@ def home():
 
 @app.route('/nutrition')
 def macronutrients():
-    return render_template('macronutrients.html', macronutrients=macronutrients_data)   
+    return render_template('Nutrition/macronutrients.html', macronutrients=macronutrients_data)   
     
 @app.route('/macrocalculator', methods=['GET', 'POST'])
 def macrocalculator():
@@ -31,7 +31,7 @@ def macrocalculator():
         macros = calculate_macros(weight, height, age, gender, activity_level, goal, weight_unit, height_unit)
         return render_template('macroscalc.html', macros=macros, weight=weight, height=height, age=age, gender=gender, activity_level=activity_level, goal=goal, weight_unit=weight_unit, height_unit=height_unit)
 
-    return render_template('macroscalc.html')
+    return render_template('Nutrition/macroscalc.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

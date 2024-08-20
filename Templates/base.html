@@ -22,7 +22,11 @@
         defer>
     </script> -->
 </head>
-<body>
+<body 
+    {% block body_style %} 
+    style="background: url('{{ url_for('static', filename='assets/Base/ringggs.webp') }}') no-repeat center center fixed; background-size: cover;" 
+    {% endblock %}
+>
 
     <!--Nav-->
     <header>
@@ -71,7 +75,7 @@
                         <a href="#" class="dropdown-toggle">Nutrition <i class="fas fa-caret-down"></i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="{{url_for('nutrition/macronutrients.html')}}">Macronutrients</a>
+                                <a href="{{url_for('macronutrients')}}">Macronutrients</a>
                             </li>
                             <li>
                                 <a href="Templates/Nutrition/macroscalc.html">Macros Calculator</a>
@@ -92,6 +96,7 @@
         </div>
     </header>
 
+    {% block content %}{% endblock %}
 
     <!-- <div class="calisthenics">
         <h1>DevCalisthenics</h1>
@@ -123,7 +128,7 @@
         </div>
 
     </footer>
-    {% block content %}{% endblock %}
+
 
     <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
 </body>
