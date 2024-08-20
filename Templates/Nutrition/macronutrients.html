@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Macronutrients{% endblock %}
+
+{% block content %}
+<div class="main-wrapper">
+    <div class="macronutrients-container">
+        <h1>Understanding Macronutrients</h1>
+
+        {% for macronutrient in macronutrients %}
+        <div class="macronutrient-section">
+            <h2 class="macro-title">{{ macronutrient.name }}</h2>
+            <p class="macro-description">{{ macronutrient.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block body_style %}
+    style="background: url('{{ url_for('static', filename='assets/Nutrition/groceries.webp') }}') no-repeat center center fixed; background-size: cover;"
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/macronutrients.css') }}">
+{% endblock %}
