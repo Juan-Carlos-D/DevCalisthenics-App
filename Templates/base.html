@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCalisthenics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="preload" as="image" href="static/assets/Base/ringggs.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"/>
+    <!-- <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "PEC1PqAne78strokyfcBh",
+        domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="PEC1PqAne78strokyfcBh"
+        domain="www.chatbase.co"
+        defer>
+    </script> -->
+</head>
+<body>
+
+    <!--Nav-->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="menu-icons">
+                    <i class="ri-menu-line"></i>
+                    <i class="ri-close-line"></i>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <img src="static/assets/Base/devcal.png">
+                </a>
+
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Programs <i class="fas fa-caret-down"></i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="Templates/Programs/beginner_program.html">Beginner Program</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#">Intermediate Program</a>
+                            </li>
+                            <li>
+                                <a href="#">Advanced Program</a>
+                            </li> -->
+                            <li>
+                                <a href="Templates/Programs/handstand_program.html">Handstand Program</a>
+                            </li>
+                            <li>
+                                <a href="Templates/Programs/muscle_up_program.html">Muscle-Up Program</a>
+                            </li>
+                            <li>
+                                <a href="Templates/Programs/Pull_Up_program.html">Pull-Up Program</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#">Mobility Program</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Nutrition <i class="fas fa-caret-down"></i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="Templates/Nutrition/macronutrients.html">Macronutrients</a>
+                            </li>
+                            <li>
+                                <a href="Templates/Nutrition/macroscalc.html">Macros Calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Templates/Blogs/blog.html">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="Templates/FAQs/FAQ.html">FAQs</a>
+                    </li>
+                    <li class="move-right btn">
+                        <a href="#">Free E-Book</a>
+                    </li>               
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- <div class="calisthenics">
+        <h1>DevCalisthenics</h1>
+        <p>All dreams are but another reality...</p>
+        <a href="#" class="cta-btn"><input type="submit" value="Start Now"></a>
+    </div> -->
+
+    <!--Footer-->
+    <footer>
+        <ul class="footer-icons">
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <!-- <li><a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li> -->
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.discord.com" target="_blank"><i class="fab fa-discord"></i></a></li>
+        </ul>
+
+        <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+
+        <div class="footer-copyright">
+            <p>@ 2024 DevCalisthenics. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>

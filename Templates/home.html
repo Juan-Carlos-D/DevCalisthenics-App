@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}DevCalisthenics{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Calisthenics for All</h1>
+    <p>All dreams are but another reality...</p>
+    <a href="{{ url_for('exercise', exercise_id=1) }}" class="start-button">Start Now</a>
+</div> 
+{% endblock %} 
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
