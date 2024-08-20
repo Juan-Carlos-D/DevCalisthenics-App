@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.macros-container {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    color: #333;
+    margin-top: 100px;  /* Adjust this value based on the header height */
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Limit maximum width for responsiveness */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    letter-spacing: 0.3px;
+    height: 470px;
+    scrollbar-width: thin;
+    scrollbar-color: #7878DD transparent;
+    
+}
+
+.macros-container h1 {
+    font-size: 3rem;
+    color: #7878DD;
+    text-align: center
+}
+
+.macros-container form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.macros-container label {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.macros-container input, .macros-container select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.macros-container button {
+    padding: 10px 20px;
+    background-color: #171C26;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.macros-container button:hover {
+    background-color: #7878DD;
+    border: none;
+}
+
+.result .calories {
+    margin-bottom: 10px;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.result h2 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.result p {
+    font-size: 1.5em;
+    color: #555;
+
+}
+
+.result .range {
+    font-size: 1rem;
+    color: #6e6e6e;
+    margin-bottom: 10px;
+}
+
+/*================== MEDIA QUERIES =====================*/
+@media (max-width: 480px) {
+
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .macros-container {
+        height: 560px;    
+    }
+    .macros-container h1 {
+        font-size: 3.5rem;
+    }
+    .macros-container label {
+        font-size: 2.0rem;
+    }
+    
+    .macros-container input, .macros-container select {
+        padding: 12px;
+        margin-bottom: 12px;
+        font-size: 1.5rem;
+    }
+    
+    .macros-container button {
+        padding: 12px 22px;
+        font-size: 2.0rem;
+    }  
+    .result h2 {
+        font-size: 3rem;
+    } 
+    .result p {
+        font-size: 2.0rem;    
+    }
+    .result .range {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media (min-width: 901px) {
+    .macros-container {
+        height: 550px;    
+    }
+    .macros-container h1 {
+        font-size: 4.0rem;
+    }
+    .macros-container label {
+        font-size: 2.5rem;
+    }
+    
+    .macros-container input, .macros-container select {
+        padding: 15px;
+        margin-bottom: 15px;
+        font-size: 2.0rem;
+    }
+    
+    .macros-container button {
+        padding: 15px 25px;
+        font-size: 2.5rem;
+    }  
+    .result h2 {
+        font-size: 3.5rem;
+    } 
+    .result p {
+        font-size: 2.5rem;    
+    }
+    .result .range {
+        font-size: 2.0rem;
+    }
+}

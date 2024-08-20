@@ -1,0 +1,106 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Container for main content */
+.main-wrapper {
+    padding: 2rem;
+    margin-top: 100px;  /* Adjust this value based on the header height */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    letter-spacing: 0.2px;
+    height: 470px;
+    scrollbar-width: thin;
+    scrollbar-color: #7878DD transparent;
+}
+
+/* Container for macronutrients content */
+.macronutrients-container {
+    padding: 2rem;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.macronutrients-container h1 {
+    text-align: center;
+    font-size: 3rem;
+    color:  #7878DD;
+    margin-bottom: 2rem;
+}
+
+/* Individual macronutrient section */
+.macronutrient-section {
+    margin-bottom: 2rem;
+}
+
+/* Title styling for each section */
+.macro-title {
+    font-size: 2.5rem;
+    color: rgb(211, 42, 42);
+    margin-bottom: 10px;
+}
+
+/* Description styling for each section */
+.macro-description {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/*================== MEDIA QUERIES =====================*/
+@media (max-width: 480px) {
+
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .main-wrapper {
+        height: 560px;
+    }
+
+    .macronutrients-container h1 {
+        font-size: 3.8rem;
+    }
+
+    .macro-title {
+        font-size: 2.8rem;
+        color: rgb(211, 42, 42);
+        margin-bottom: 10px;
+    }
+
+    .macro-description {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+@media (min-width: 901px) {
+    .main-wrapper {
+        height: 550px;
+
+    }
+
+    .macronutrients-container h1 {
+        font-size: 4rem;
+    }
+
+    .macro-title {
+        font-size: 3rem;
+        color: rgb(211, 42, 42);
+        margin-bottom: 10px;
+    }
+
+    .macro-description {
+        font-size: 2rem;
+    }
+}
