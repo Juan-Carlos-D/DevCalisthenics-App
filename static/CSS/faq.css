@@ -1,0 +1,106 @@
+/* Ensuring body takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Main wrapper for flexbox layout */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* FAQ container styling */
+.faq-container {
+    margin-top: 100px;  /* Adjust this value based on the header height */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 600px;
+    color: steelblue;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.faq-container h1 {
+    font-size: 3.5rem;
+    color: #7878DD;
+}
+
+/* Question container styling */
+.questions-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    overflow-y: auto;
+    letter-spacing: 0.2px;
+    height: 350px;
+    scrollbar-width: thin;
+    scrollbar-color: #7878DD transparent;
+}
+
+.questions-container h2 {
+    font-size: 2.5rem;
+    color: rgb(211, 42, 42);
+    margin-bottom: 10px;
+}
+
+.questions-container p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px; /* Space below each answer */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .faq-container {
+        margin-top: 90px;  /* Adjust this value for smaller header on mobile */
+        max-width: 80%;
+        padding: 1rem;
+    }
+
+    .questions-container {
+        max-width: 80%;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .faq-container {
+        margin-top: 90px; 
+    }
+
+    .questions-container {
+        height: 500px;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1200px) {
+    .faq-container {
+        margin-top: 90px; 
+    }
+
+    .questions-container {
+        height: 480px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .faq-container {
+        margin-top: 90px; 
+    }
+
+    .questions-container {
+        height: 500px;
+    } 
+}
