@@ -1,0 +1,812 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#program{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+    margin-top: 80px; 
+    /* background-color: rgba(216, 213, 213, 0.8); */
+    width: 100%;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    letter-spacing: 0.3px;
+    /* height: 470px; */
+    scrollbar-width: thin;
+    scrollbar-color: #7878DD transparent; 
+}
+
+.program-heading {
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 20px 30px;
+}
+
+.program-heading h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #7878DD;
+    word-wrap: normal;
+}
+
+/*================= INTRO SECTION CONTAINER ==================*/
+
+.intro-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    color: #eee;
+    border-radius: 10px;
+}
+
+.intro-left {
+    flex: 1; 
+}
+
+.intro-left img {
+    width: 100%;
+    height: auto; 
+    max-width: 100%; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.intro-right {
+    flex: 1;
+    text-align: justify; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-name {
+    letter-spacing: 0.05rem;
+    color: rgb(120, 120, 221);
+    font-size: 1.1rem;
+}
+
+.span-words {
+    letter-spacing: 0.03rem;
+    color: rgb(120, 120, 221);
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px; /* Add space above buttons */
+    background-color: #171C26;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .3s ease all;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.btn-download:hover {
+    background-color: #7878DD;
+    transition: .3s ease all;
+}
+
+/*================= PROGRAM GOALS CONTAINER ==================*/
+.program-goals-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border-radius: 10px; 
+}
+
+.program-goals-container h2 {
+    font-size: 3rem;
+    color: #7878DD;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.goals-box-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.goal-box {
+    /* max-width: 350px; */
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s all ease;   
+    background-color: #7878DD;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: .3s ease all;
+    border: 1px solid #eee;
+}
+
+.goal-box:hover {
+    background-color: #171C26;
+    box-shadow: 16px 20px 50px rgba(0, 0, 0, .12);
+    transition: .3s all ease;
+    border: 1px solid #eee;
+    transition: .3s ease all;
+}
+
+.goal-box-img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.goal-box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s all ease;
+    border-radius: 5px;
+}
+
+.goal-box-text {
+    text-align: center;
+    padding: 30px 10px 20px 10px;
+}
+
+.goal-box-text strong {
+    color:#eee;
+    font-size:2rem;
+    font-weight: 400;
+}
+
+
+/*================= PROGRAM EQUIPMENT SECTION CONTAINER ==================*/
+.program-equipment-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border-radius: 10px;
+    margin: 50px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.program-equipment-section-container .section-heading {
+    font-size: 3rem;
+    color: #7878DD;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.program-section,
+.equipment-section {
+    width: 100%; 
+    max-width: 400px; 
+    height: 300px;
+    /* box-sizing: border-box;  */
+    background-color: #171C26;
+    border: 1px solid rgb(120, 120, 221);
+    color: #eee;
+    border-radius: 10px;
+    padding: 20px; 
+    text-align: left;
+    overflow: hidden; 
+    margin-bottom: 20px;
+    transition: .3s ease all;
+}
+
+.program-section h2,
+.equipment-section h2 {
+    font-size: 2.5rem;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.program-section .included-list,
+.equipment-section .equipment-list {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding-left: 1rem; 
+    margin: 0; 
+    overflow-y: auto; 
+    height: calc(100% - 2.5rem); /* Adjust height to fit within the container, accounting for padding and title */
+}
+
+.program-section .included-list li,
+.equipment-section .equipment-list li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.program-section .included-list li:before,
+.equipment-section .equipment-list li:before {
+    content: "\2714"; 
+    color: #ffffff; 
+    display: inline-block;
+    width: 1rem;
+    margin-right: 1rem; 
+}
+
+.program-section .included-list li:first-child,
+.equipment-section .equipment-list li:first-child {
+    margin-top: 10px;
+}
+
+.program-equipment-section-container .program-section:hover,
+.program-equipment-section-container .equipment-section:hover {
+    background-color: #7878DD;
+    border: 1px solid #eee;
+    transition: .3s ease all;
+}
+
+/*================= LEVEL UP CONTAINER ==================*/
+.level-up-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    color: #eee;
+    border-radius: 10px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.level-up-section-container h2 {
+    font-size: 3rem;
+    color: #7878DD;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.level-up-section-container p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.level-up-section-container strong,
+.level-up-section-container span {
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0 35px;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    background: #171C26;
+    color: #eee;
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 800;
+    transform: translateY(-50%);
+}
+
+
+.wrapper i:first-child {
+    left: -15px;
+    display: none;
+}
+
+.wrapper i:last-child {
+    right: -15px;
+}
+
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    height: auto;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100% / 2.05);
+    border-radius: 10px;
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
+/*=========== CTA BTN SECTION ==============*/
+.cta-btn {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+form h3 {
+    font-size: 2.2rem;
+    color: #7878DD;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input[type="email"] {
+    padding: 12px 7px;
+    width: 90%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+input[type="submit"] {
+    padding: 15px 10px;
+    width: 60%;
+    transition: .3s ease all;
+}
+
+input[type="submit"]:hover {
+    background-color: #7878DD;
+    transition: .3s ease all;
+}
+
+/*================ MEDIA ==================*/
+@media (max-width: 900px) {
+    .carousel img {
+        width: calc(100% / 2.05);
+    }
+}
+
+@media (max-width: 550px) {
+    .carousel img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 550px) {
+    .program-heading h1 {
+        font-size: 3.7rem;
+    }
+    .intro-right {
+        font-size: 1.4rem;
+    }
+
+    .program-name {
+        font-size: 1.4rem;
+    }
+    .btn-download {
+        font-size: 1.8rem;
+    }
+    
+    .program-goals-container h2 {
+        font-size: 3.5rem;
+    }
+    .goal-box-text strong {
+        font-size:2.4rem;
+    }
+    .program-equipment-section-container .section-heading {
+        font-size: 3.5rem;
+    }
+    .program-section h2,
+    .equipment-section h2 {
+        font-size: 2.8rem;
+    } 
+    .program-section .included-list li,
+    .equipment-section .equipment-list li {
+        font-size: 1.5rem;
+    }
+    .program-section .included-list li:before,
+    .equipment-section .equipment-list li:before {
+        margin-right: 1.1rem; 
+    }
+    .level-up-section-container h2 {
+        font-size: 3.5rem;
+    }
+    .level-up-section-container p {
+        font-size: 1.6rem;
+
+    }
+    .level-up-section-container strong,
+    .level-up-section-container span {
+        font-size: 1.8rem;
+    }
+    .wrapper i {
+        font-size: 1.5rem;
+    }
+    form h3 {
+        font-size: 2.5rem;
+    }
+    input[type="email"] {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    input[type="submit"] {
+        width: 60%;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 900px) {
+    .program-heading h1 {
+        font-size: 3.9rem;
+    }
+    .intro-right {
+        font-size: 1.7rem;
+    }
+
+    .program-name {
+        font-size: 1.9rem;
+    }
+    .btn-download {
+        font-size: 2rem;
+    }
+    
+    .program-goals-container h2 {
+        font-size: 3.7rem;
+    }
+    .goal-box-text strong {
+        font-size:2.6rem;
+    }
+    .program-equipment-section-container .section-heading {
+        font-size: 3.8rem;
+    }
+    .program-section h2,
+    .equipment-section h2 {
+        font-size: 3rem;
+    } 
+    .program-section .included-list li,
+    .equipment-section .equipment-list li {
+        font-size: 1.6rem;
+    }
+    .program-section .included-list li:before,
+    .equipment-section .equipment-list li:before {
+        margin-right: 1.2rem; 
+    }
+    .level-up-section-container h2 {
+        font-size: 3.7rem;
+    }
+    .level-up-section-container p {
+        font-size: 1.8rem;
+
+    }
+    .level-up-section-container strong,
+    .level-up-section-container span {
+        font-size: 2rem;
+    }
+    .wrapper i {
+        font-size: 1.7rem;
+    }
+    form h3 {
+        font-size: 3rem;
+    }
+    input[type="email"] {
+        width: 90%;
+        font-size: 2rem;
+    }
+    input[type="submit"] {
+        width: 60%;
+        font-size: 2.2rem;
+    }
+}
+
+/* ================= MEDIA QUERY ===============*/
+@media (min-width: 901px) and (max-width: 1200px) {
+    #program{
+        max-width: 1250px; 
+    }
+    .program-heading h1 {
+        font-size: 4rem;
+    }
+
+    .intro-section-container {
+        flex-direction: row;
+    }
+    .intro-left {
+        flex: 1; 
+        margin: 20px;
+    }
+    .intro-right {
+        padding: 20px 0;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    .program-name {
+        letter-spacing: 0.06rem;
+        font-size: 1.6rem;
+    }
+    .span-words {
+        letter-spacing: 0.05rem;
+
+    }
+    .btn-download {
+        font-size: 2rem;
+        padding: 20px 10px;
+        width: 40%;
+    }
+
+    .program-goals-container {
+        padding: 20px 20px 50px;
+    }
+
+    .program-goals-container h2 {
+        font-size: 3.3rem;
+        color: #7878DD;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+    .goals-box-container {
+        flex-direction: row;
+    }
+    .goal-box {
+        /* max-width: 350px; */
+        margin: 10px;
+    }
+    .goal-box-img {
+        width: 100%;
+        height: 100%;
+    }
+    .goal-box-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 2.5rem;
+    }
+    .goal-box-text strong {
+        font-size:2.3rem;
+    }
+    .program-equipment-section-container .section-heading {
+        font-size: 3.4rem;
+        color: #7878DD;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+    .section-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .program-section,
+    .equipment-section {
+        width: 100%; 
+        max-width: 500px; 
+        height: 300px;
+        padding: 20px; 
+        margin: 0 15px 20px;
+    }
+    .program-section h2,
+    .equipment-section h2 {
+        font-size: 2.8rem; 
+    }
+    .program-section .included-list li,
+    .equipment-section .equipment-list li {
+        font-size: 1.4rem;
+    }
+    .program-section .included-list li:before,
+    .equipment-section .equipment-list li:before {
+        margin-right: 1.1rem; 
+    }
+
+    .level-up-section-container h2 {
+        font-size: 3.5rem;
+    }
+    .level-up-section-container p {
+        font-size: 2rem;
+    }
+    .level-up-section-container strong,
+    .level-up-section-container span {
+        font-size: 2.5rem;
+    }
+    .wrapper i {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 1.6rem;
+    }
+    form h3 {
+        font-size: 2.6rem;
+        margin-bottom: 13px;
+    }
+
+    input[type="email"] {
+        padding: 14px 9px;
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    input[type="submit"] {
+        padding: 15px 10px;
+        width: 60%;
+    }    
+}
+
+@media(min-width: 1201px) {
+    #program{
+        max-width: 1980px;
+    }
+    .program-heading h1 {
+        font-size: 5rem;
+    }
+
+    .intro-section-container {
+        flex-direction: column;
+        background-color: transparent;
+    }
+    .intro-left {
+        flex: 1; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .intro-left img {
+        width: 100%;
+        height: auto; 
+        max-width: 50%; 
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    .intro-right {
+        padding: 20px 100px;
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+        color: #eee;
+        width: 60%;
+    }
+    .program-name {
+        letter-spacing: 0.06rem;
+        font-size: 2.7rem;
+    }
+
+    .btn-download {
+        font-size: 2.5rem;
+        padding: 20px 10px;
+        width: 50%;
+        border: 1px solid #eee;
+        margin-top: 30px;
+    }
+
+    .program-goals-container {
+        padding: 20px 20px 50px;
+        background-color: transparent;
+        width: 80%;
+    }
+
+    .program-goals-container h2 {
+        font-size: 3.5rem;
+    }
+    .goals-box-container {
+        flex-direction: row;
+    }
+    .goal-box {
+        /* max-width: 350px; */
+        margin: 10px;
+    }
+    .goal-box-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .goal-box-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 2.5rem;
+    }
+    .goal-box-text strong {
+        font-size:2.5rem;
+    }
+    .program-equipment-section-container {
+        background-color: transparent;
+    }
+    .program-equipment-section-container .section-heading {
+        font-size: 3.5rem;
+    }
+    .section-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .program-section,
+    .equipment-section {
+        width: 100%; 
+        max-width: 700px; 
+        height: 40vh;
+
+        padding: 20px; 
+        margin: 0 25px 20px;
+    }
+    .program-section h2,
+    .equipment-section h2 {
+        font-size: 3rem; 
+    }
+    .program-section .included-list li,
+    .equipment-section .equipment-list li {
+        font-size: 1.6rem;
+    }
+    .program-section .included-list li:before,
+    .equipment-section .equipment-list li:before {
+        margin-right: 1.4rem; 
+    }
+
+
+    .level-up-section-container {
+        background-color: transparent;
+        color: #eee;
+    }
+    .level-up-section-container h2 {
+        font-size: 3.5rem;
+    }
+    .level-up-section-container p {
+        font-size: 2.5rem;
+    }
+    .level-up-section-container strong,
+    .level-up-section-container span {
+        font-size: 3rem;
+    }
+    .wrapper i {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 2rem;
+        color:#171C26;
+        background-color: #eee;
+    }
+    form h3 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    input[type="email"] {
+        padding: 16px 11px;
+        width: 90%;
+        font-size: 2rem;
+    }
+    input[type="submit"] {
+        padding: 17px 12px;
+        width: 60%;
+    }  
+}
