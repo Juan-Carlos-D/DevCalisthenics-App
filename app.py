@@ -3,7 +3,7 @@ from faq import faq_data
 from macronutrients import macronutrients_data
 from macroscalc import calculate_macros
 from blogs import blogs
-from programs import programs
+from programs import programs_data
 import re
 
 app = Flask(__name__, static_folder='static')
@@ -60,11 +60,12 @@ def blog(blog_id):
     else:
         return 'Blog not found', 404
     
-@app.route('/programs')
-def programs_page():
-    return render_template('Programs/programs.html', programs=programs)
-
-
+@app.route('/program/<program_id>')
+def program(program_id):
+    program = programs_data.get(program_id)
+    if not program:
+        return "Program not found", 404
+    return render_template('Programs/programs.html', program=program)
 
 if __name__ == '__main__':
     app.run(debug=True)

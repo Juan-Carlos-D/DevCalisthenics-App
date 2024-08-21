@@ -1,6 +1,90 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- templates/programs.html -->
+
+<section id="program">
+    <div class="program-heading">
+        <h1><strong>{{ program.title }}</strong></h1>
+    </div>
+
+    <div class="intro-section-container">
+        <div class="intro-left">
+            <img src="{{ program.intro_image }}" alt="Program Image">
+        </div>
+        <div class="intro-right">
+            {% for paragraph in program.intro_text %}
+                <p>{{ paragraph | safe }}</p>
+            {% endfor %}
+            <a href="#" class="btn-download" download>Download PDF</a>
+        </div>
+    </div>      
+
+    <div class="program-goals-container">
+        <h2>The Primary Goals for this Program Are:</h2>
+        <div class="goals-box-container">
+            {% for goal in program.goals %}
+                <div class="goal-box">
+                    <div class="goal-box-img">
+                        <img src="{{ goal.image }}" alt="Goal Image">
+                    </div>
+                    <div class="goal-box-text">
+                        <strong>{{ goal.text }}</strong>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+         
+    <div class="program-equipment-section-container">
+        <h2 class="section-heading">Everything You Need to Know</h2>
+        <div class="section-wrapper">
+            <div class="program-section">
+                <div class="program-details">
+                    <h2 class="program-section-title">Program Includes:</h2>
+                    <ul class="included-list">
+                        {% for detail in program.program_details %}
+                            <li>{{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="equipment-section">
+                <div class="equipment-details">
+                    <h2 class="equipment-section-title">Equipment Needed:</h2>
+                    <ul class="equipment-list">
+                        {% for item in program.equipment_needed %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="level-up-section-container">
+        <h2>Ready to Level Up?</h2>
+        <p>Join our <strong class="program-name">DevCalisthenics community</strong> and take your <span class="span-words">fitness journey</span> to the next level!</p>
+    
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                {% for image in program.carousel_images %}
+                    <img src="{{ image }}" alt="Carousel Image" draggable="false">
+                {% endfor %}
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+    
+        <div class="cta-btn">
+            <form action="#">
+                <h3>Enter Your Email to Receive Your Program</h3>
+                <input type="email" placeholder="Email Address">
+                <input type="submit" value="Send My Program">
+            </form>
+        </div>
+    </div>
+</section>
 
 
 {% endblock %}
