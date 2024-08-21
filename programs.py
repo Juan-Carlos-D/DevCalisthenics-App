@@ -120,4 +120,43 @@ programs_data = {
             "../../static/assets/Programs/Base/Programs/streetworkout.webp"
         ]
     },
+    "pull_up_program": {
+        "title": "Welcome to the Pull-Up Program!",
+        "intro_image": "../../static/assets/Programs/Pull Up Program/pullup.webp",
+        "intro_text": [
+            "The <strong class=\"program-name\">DevCalisthenics Pull-Up Program</strong> is designed to help you achieve your first pull-up by focusing on three key goals: <span class=\"span-words\">grip strength, scapula control, and back strength.</span>",
+            "Through a series of carefully structured exercises, you will develop essential <span class=\"span-words\">scapula control</span> that supports all back movement, improve <span class=\"span-words\">back strength</span> with exercises such as rows, and enhance overall <span class=\"span-words\">grip strength.</span> This program aims to equip beginners with the skills and confidence needed to achieve their first pull up, setting the stage for long-term fitness and functional strength.",
+            "You can download the complete <span class=\"span-words\">pull-up program</span> in PDF format by clicking the button below or by scrolling to the bottom of the page to have it sent to your email."
+        ],
+        "goals": [
+            {"image": "../../static/assets/Programs/Pull Up Program/grip.webp", "text": "Building Foundational Grip Strength"},
+            {"image": "../../static/assets/Programs/Pull Up Program/superman.webp", "text": "Developing Baseline Back Strength"},
+            {"image": "../../static/assets/Programs/Pull Up Program/ringrow.webp", "text": "Improving Scapula Control & Coordination"}
+        ],
+        "program_details": [
+            "Comprehensive Warm-Up & Mobility Routine",
+            "Foundational Grip Strength Exercises",
+            "Back Strength Training Routine",
+            "Scapula Control & Coordination Routine",
+            "Video Tutorials for Each Exercise",
+            "Progress Tracking"
+        ],
+        "equipment_needed": [
+            "Open Space (Outdoors or Indoors)",
+            "Exercise Mat (Optional)",
+            "Pull-Up Bar",
+            "Resistance Bands",
+            "Dumbbells"
+        ],
+        "carousel_images": [
+            "../../static/assets/Programs/Base/Programs/planche.webp",
+            "../../static/assets/Programs/Base/Programs/invertedgymnast.webp",
+            "../../static/assets/Programs/Base/Programs/reverseplank.webp",
+            "../../static/assets/Programs/Base/Programs/ringsview.webp",
+            "../../static/assets/Programs/Base/Programs/dipsoutdoor.webp",
+            "../../static/assets/Programs/Base/Programs/equipment_img.webp",
+            "../../static/assets/Programs/Base/Programs/pullupgroup.webp",
+            "../../static/assets/Programs/Base/Programs/streetworkout.webp"
+        ]
+    }
 }
