@@ -1,0 +1,224 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#blog {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 50px 0px;
+    margin-top: 80px; 
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Limit maximum width for responsiveness */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    letter-spacing: 0.3px;
+    /* height: 470px; */
+    scrollbar-width: thin;
+    scrollbar-color: #7878DD transparent; 
+}
+
+
+.blog-heading h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #7878DD;
+}
+
+.blog-box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1050px;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.blog-box {
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s all ease;
+}
+
+.blog-box:hover {
+    background-color: #eee;
+    box-shadow: 16px 20px 50px rgba(0, 0, 0, .12);
+    transition: .3s all ease;
+}
+
+.blog-box-img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.blog-box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s all ease;
+    border-radius: 5px;
+}
+
+.blog-img-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color:#171C26;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, .12);
+    animation: fade 0.3s;
+    font-size: 12px;
+}
+
+.blog-img-link:hover {
+    color:#7878DD;
+    font-size: 15px;
+}
+
+.blog-box:hover .blog-box-img a {
+    display: flex;
+}
+
+.blog-box:hover .blog-box-img img {
+    filter: blur(3px);
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.blog-box-text {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 20px 10px;
+}
+
+.blog-box-text strong,
+.blog-box-text p {
+    color:#a5a5a5;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.blog-box-text a {
+    font-size: 1.5rem;
+    color: #252525; 
+    font-weight: 800;
+    line-height: 1.8rem;
+    margin: 5px 0px 10px 0px;
+    transition: .3s ease all;
+}
+
+.blog-box-text a:hover {
+    color:#7878DD;
+    transition: .3s ease all;
+}
+
+.blog-box-text p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.blog-author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.blog-author-img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.blog-author-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-author-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-author-text strong {
+    color: #252525;
+    font-weight: 800;   
+}
+
+.blog-author-text span {
+    color: #797979;
+    font-size: 0.8rem;
+    font-weight: 500;   
+}
+
+/* ================= MEDIA QUERY ===============*/
+@media (max-width: 920px) {
+    .blog-box-container {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 0px;
+
+    }
+}
+
+@media (max-width: 487px) {
+    #blog {
+        height: 100%;
+    }
+
+    .blog-box-container {
+        grid-template-columns: 1fr;  
+    }
+    .blog-heading h1 {
+        font-size: 2.5rem;
+        line-height: 1.6rem;
+    }
+}
+
+@media (min-width: 921px) {
+    #blog {
+        width: 100%; /* Adjust width as needed */
+        max-width: 1980px; /* Limit maximum width for responsiveness */
+    }   
+}
+
+@media (min-width: 488px)  and (max-width:599px){
+    .blog-box-container {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+}
