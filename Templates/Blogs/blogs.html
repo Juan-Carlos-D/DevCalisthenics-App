@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+<section id="blog">
+    <div class="blog-post">
+        <h1 class="blog-title">{{ blog.title }}</h1>
+        <div class="blog-meta">Posted on {{ blog.date }}, by {{ blog.author }}</div>
+        <div class="blog-content">
+            {{ blog['content'] | safe }}
+        </div>
+
+        <div class="back-to-blogs">
+            <a href="{{ url_for('blogs_home') }}" class="back-button">Back to Blogs</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block body_style %}
+    style="background: url('{{ url_for('static', filename='assets/Blog/Main/blogsbg.webp') }}') no-repeat center center fixed; background-size: cover;"
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blogs.css') }}">
+{% endblock %}

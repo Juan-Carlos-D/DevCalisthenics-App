@@ -6,7 +6,7 @@ from macroscalc import calculate_macros
 from blogs import blogs
 import re
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def home():
@@ -41,13 +41,24 @@ def faq():
 def blogs_home():
     return render_template('Blogs/blogs_home.html', blogs=blogs)
 
+def process_content(content):
+    # Find all occurrences of {{ url_for(...)}}
+    matches = re.findall(r"\{\{\s*url_for\([^)]+\)\s*\}\}", content)
+    for match in matches:
+        # Evaluate the url_for expression
+        evaluated_url = eval(match.strip("{{}}"))
+        # Replace the url_for expression with the actual URL
+        content = content.replace(match, evaluated_url)
+    return content
+
 @app.route('/blog/<int:blog_id>')
 def blog(blog_id):
-    blog = next((b for b in blogs if b["id"] == blog_id), None)
+    blog = next((blog for blog in blogs if blog['id'] == blog_id), None)
     if blog:
+        blog['content'] = process_content(blog['content'])
         return render_template('Blogs/blogs.html', blog=blog)
     else:
-        return "Blog not found", 404
+        return 'Blog not found', 404
 
 if __name__ == '__main__':
     app.run(debug=True)
