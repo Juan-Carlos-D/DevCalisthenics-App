@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, abort
 from faq import faq_data 
 from macronutrients import macronutrients_data
 from macroscalc import calculate_macros
-# from exercises import exercises
 from blogs import blogs
+from programs import programs
 import re
 
 app = Flask(__name__, static_folder='static')
@@ -59,6 +59,12 @@ def blog(blog_id):
         return render_template('Blogs/blogs.html', blog=blog)
     else:
         return 'Blog not found', 404
+    
+@app.route('/programs')
+def programs_page():
+    return render_template('Programs/programs.html', programs=programs)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
