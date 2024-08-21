@@ -7,7 +7,7 @@ faq_data = [
     },
     {
         "question": "How do I know which program is right for me?",
-        "answer": "First, decide what goals you want to accomplish. Then, pick a program that cloely aligns with that goal. If you are a beginner, it is recommended to start with the beginner program to build a strong foundation."
+        "answer": "First, decide what goals you want to accomplish. Then, pick a program that closely aligns with that goal. If you are a beginner, it is recommended to start with the beginner program to build a strong foundation."
     },
     {
         "question": "What equipment do I need? Can I workout at home?",
