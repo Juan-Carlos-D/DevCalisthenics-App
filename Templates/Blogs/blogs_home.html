@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}DevCalisthenics Blogs{% endblock %}
+
+{% block content %}
+<section id="blog">
+    <div class="blog-heading">
+        <h1><strong>DevCalisthenics Blogs</strong></h1>
+    </div>
+
+    <div class="blog-box-container">
+        {% for blog in blogs %}
+        <div class="blog-box">
+            <div class="blog-box-img">
+                <img src="{{ url_for('static', filename=blog.image) }}" alt="{{ blog.alt }}">
+                <a href="{{ url_for('blog', blog_id=blog.id) }}" class="blog-img-link">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+            </div>
+            <div class="blog-box-text">
+                <strong>{{ blog.title }}</strong>
+                <a href="{{ url_for('blog', blog_id=blog.id) }}">{{ blog.subtitle }}</a>
+                <p>{{ blog.description }}</p>
+                <!--Author-->
+                <div class="blog-author">
+                    <div class="blog-author-img">
+                        <img src="{{ url_for('static', filename='assets/Blog/Main/author.jpg') }}" alt="{{ blog.author_alt }}">
+                    </div>
+                    <div class="blog-author-text">
+                        <strong>{{ blog.author }}</strong>
+                        <span>{{ blog.date }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+
+{% block body_style %}
+    style="background: url('{{ url_for('static', filename='assets/Blog/Main/blogsbg.webp') }}') no-repeat center center fixed; background-size: cover;"
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blogs_home.css') }}">
+{% endblock %}

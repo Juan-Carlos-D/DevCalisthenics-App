@@ -3,7 +3,7 @@ from faq import faq_data
 from macronutrients import macronutrients_data
 from macroscalc import calculate_macros
 # from exercises import exercises
-# from blogs import blogs
+from blogs import blogs
 import re
 
 app = Flask(__name__)
@@ -37,6 +37,17 @@ def macrocalculator():
 def faq():
     return render_template('FAQ/FAQ.html', faq_data=faq_data)
 
+@app.route('/blogs')
+def blogs_home():
+    return render_template('Blogs/blogs_home.html', blogs=blogs)
+
+@app.route('/blog/<int:blog_id>')
+def blog(blog_id):
+    blog = next((b for b in blogs if b["id"] == blog_id), None)
+    if blog:
+        return render_template('Blogs/blogs.html', blog=blog)
+    else:
+        return "Blog not found", 404
 
 if __name__ == '__main__':
     app.run(debug=True)
